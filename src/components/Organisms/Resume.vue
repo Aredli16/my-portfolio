@@ -42,18 +42,18 @@
       </div>
       <div class="col-lg-4">
         <InformationCard class="p-4" title="Compétences">
-          <SkillBar percentage="95" skill="PHP"/>
-          <SkillBar percentage="92" skill="Javascript"/>
-          <SkillBar percentage="90" skill="Dart"/>
-          <SkillBar percentage="90" skill="SQL"/>
-          <SkillBar percentage="85" skill="HTML & CSS"/>
-          <SkillBar percentage="85" skill="Java"/>
-          <SkillBar percentage="60" skill="C & C++"/>
+          <SkillBar :percentage="95" skill="PHP"/>
+          <SkillBar :percentage="92" skill="Javascript"/>
+          <SkillBar :percentage="90" skill="Dart"/>
+          <SkillBar :percentage="90" skill="SQL"/>
+          <SkillBar :percentage="85" skill="HTML & CSS"/>
+          <SkillBar :percentage="85" skill="Java"/>
+          <SkillBar :percentage="60" skill="C & C++"/>
         </InformationCard>
         <InformationCard class="p-4 mt-3" title="Langues">
-          <SkillBar percentage="100" skill="Francais"/>
-          <SkillBar percentage="75" skill="Anglais"/>
-          <SkillBar percentage="50" skill="Espagnol"/>
+          <SkillBar :percentage="100" skill="Francais"/>
+          <SkillBar :percentage="75" skill="Anglais"/>
+          <SkillBar :percentage="50" skill="Espagnol"/>
         </InformationCard>
       </div>
     </div>

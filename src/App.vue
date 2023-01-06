@@ -1,13 +1,18 @@
 <template>
-  <Header/>
-  <main>
-    <About/>
-    <Resume/>
-    <Portfolio/>
-  </main>
-  <footer>
-    <Contact/>
-  </footer>
+  <div data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+       data-bs-spy="scroll"
+       data-bs-target="navbar" tabindex="0">
+    <span id="home"></span>
+    <Header/>
+    <main>
+      <About id="about"/>
+      <Resume id="resume"/>
+      <Portfolio id="portfolio"/>
+    </main>
+    <footer>
+      <Contact id="contact"/>
+    </footer>
+  </div>
 </template>
 <script setup>
 import Header from "@/components/Organisms/Header.vue";

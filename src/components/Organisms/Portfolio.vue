@@ -8,18 +8,22 @@
           Site de E-Commerce fait à un membre de ma famille dans le but de vendre des brioches
         </PortfolioCard>
         <PortfolioCard
-            class="mt-2" img="https://miro.medium.com/max/1000/1*qJppTMduXXhjgU2tZt9SfQ.png" title="Web">
+            class="mt-2"
+            img="https://miro.medium.com/max/1000/1*qJppTMduXXhjgU2tZt9SfQ.png"
+            link="https://github.com/Aredli16/nuxt-v3-movie" title="Web">
           Web App qui récupère des films via une API
         </PortfolioCard>
       </div>
       <div class="col">
         <PortfolioCard img="https://github.com/Aredli16/uphf_edt/raw/main/assets/uphf_banner.png?raw=true"
+                       link="https://github.com/Aredli16/uphf_edt"
                        title="Mobile">
           Permet de consulter son emploi du temps sur son smartphone
         </PortfolioCard>
         <PortfolioCard
             class="mt-2"
             img="https://lh3.googleusercontent.com/m-PHJQQwL-eS8Wpu5qHtf9YkwfvkeT6zy9v3Ap7mqI8OWrdbrkB77g7o3d586R59f3yq"
+            link="https://github.com/Aredli16/mealweek"
             title="Mobile">
           Application qui génère un menu de repas aléatoire pour une semaine
         </PortfolioCard>

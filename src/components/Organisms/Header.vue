@@ -5,7 +5,7 @@
       <HeaderContent class="position-absolute top-50 translate-middle-y"/>
     </div>
   </header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
       <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
               class="navbar-toggler"
@@ -14,7 +14,7 @@
       </button>
       <div id="navbarSupportedContent" class="collapse navbar-collapse py-2">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#home">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">A propos</a></li>
           <li class="nav-item"><a class="nav-link" href="#resume">CV</a></li>
         </ul>
@@ -47,16 +47,16 @@ import HeaderContent from "../Molecules/HeaderContent.vue";</script>
   box-shadow: 0 5px 10px rgb(54 54 54 / 18%);;
 }
 
+.active {
+  color: var(--bs-primary) !important;
+}
+
 .nav-link {
   font-weight: bold;
   font-size: 1.2em;
   color: rgba(0, 0, 0, 0.8);
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important;
-}
-
-.active {
-  color: var(--bs-primary) !important;
 }
 
 .brand-img {
