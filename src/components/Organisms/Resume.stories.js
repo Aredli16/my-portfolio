@@ -1,7 +1,7 @@
 import Resume from './Resume.vue';
 
 export default {
-    title: 'Molecules/Resume',
+    title: 'Organisms/Resume',
     component: Resume,
 };
 
