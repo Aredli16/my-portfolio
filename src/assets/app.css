@@ -1,0 +1,31 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+    --bs-primary: #F85C70;
+    --bs-primary-rgb: 248, 92, 112;
+    --bs-secondary: #444;
+    --bs-secondary-rgb: 68, 68, 68;
+    --bs-light: #f8f9fa;
+    --bs-light-rgb: 248, 249, 250;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dosis', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-radius: 30px;
+}
+
+.btn-primary:hover {
+    background-color: #f11f3b !important;
+    border-color: #f11f3b !important;
+}
