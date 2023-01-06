@@ -4,20 +4,56 @@
     <div class="row justify-content-evenly">
       <div class="col-lg-4">
         <InformationCard class="p-4" title="Expériences">
-          <ExperienceCard ending-date="test" experience="test" location="test" starting-date="testr"/>
+          <ExperienceCard date="2021 - Aujourd'hui" experience="Préparateur et Livreur Drive" location="Auchan Retail">
+            Préparation des commandes puis livraison finale jusqu’aux clients dans le respect de la charte de l’enseigne
+          </ExperienceCard>
+          <hr>
+          <ExperienceCard date="Mai 2021 - Aout 2021 / Juin 2020 - Aout 2020"
+                          experience="Opérateur de ligne en conditionnement"
+                          location="Société des eaux minérales de Saint-Amand">
+            Gestion d’une ligne de production (réapprovisionnement en matières premières, assurer le bon maintien de la
+            ligne de production)
+          </ExperienceCard>
+          <hr>
+          <ExperienceCard date="2017" experience="Stage dans un service informatique"
+                          location="Lyreco">
+            Sate de découverte en classe de 3ème. Ce stage m'a permis de découvrir le monde de l'entreprise ainsi que
+            différent type de métier dans l'informatique: administrateur système, réseau et développeur
+          </ExperienceCard>
         </InformationCard>
       </div>
       <div class="col-lg-4">
         <InformationCard class="p-4" title="Formation">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus dolorem earum, obcaecati officiis
-          perspiciatis totam. Aliquam aperiam culpa dolore doloribus excepturi fugiat, illo, libero minima modi
-          molestiae totam, vel!
+          <ExperienceCard date="En Cours" experience="Licence Informatique"
+                          location="Université Polytechnique des Hauts-de-France">
+          </ExperienceCard>
+          <hr>
+          <ExperienceCard date="2020" experience="Baccalauréat"
+                          location="Lycée Kastler Denain">
+            Baccalauréat scientifique spécialité science de l’ingénieur avec option ISN (Informatique et Sciences du
+            numériques). Obtenu avec mention Bien
+          </ExperienceCard>
+          <hr>
+          <ExperienceCard date="2017" experience="Brevet des colleges"
+                          location="College Jean Moulin Wallers">
+            Obtenu avec mention Bien
+          </ExperienceCard>
         </InformationCard>
       </div>
       <div class="col-lg-4">
         <InformationCard class="p-4" title="Compétences">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam animi dolorem dolores ducimus error
-          facilis fugit illo iure laboriosam mollitia numquam quaerat qui quisquam sed, sequi sit temporibus velit!
+          <SkillBar percentage="95" skill="PHP"/>
+          <SkillBar percentage="92" skill="Javascript"/>
+          <SkillBar percentage="90" skill="Dart"/>
+          <SkillBar percentage="90" skill="SQL"/>
+          <SkillBar percentage="85" skill="HTML & CSS"/>
+          <SkillBar percentage="85" skill="Java"/>
+          <SkillBar percentage="60" skill="C & C++"/>
+        </InformationCard>
+        <InformationCard class="p-4 mt-3" title="Langues">
+          <SkillBar percentage="100" skill="Francais"/>
+          <SkillBar percentage="75" skill="Anglais"/>
+          <SkillBar percentage="50" skill="Espagnol"/>
         </InformationCard>
       </div>
     </div>
@@ -26,4 +62,5 @@
 <script setup>
 import SectionTitle from "../Atoms/SectionTitle.vue";
 import InformationCard from "../Molecules/InformationCard.vue";
-import ExperienceCard from "@/components/Atoms/ExperienceCard.vue";</script>
+import ExperienceCard from "../Atoms/ExperienceCard.vue";
+import SkillBar from "../Atoms/SkillBar.vue";</script>

@@ -1,19 +1,14 @@
 <template>
-  <h6 class="text-primary fs-4">{{ startingDate }} - {{ endingDate }}</h6>
-  <p class="text-muted opacity-75">{{ experience }} | {{ location }}</p>
+  <h6 class="text-primary fs-4">{{ date }}</h6>
+  <p class="text-muted opacity-75">{{ experience }} | <span class="fst-italic">{{ location }}</span></p>
   <p class="text-muted">
     <slot/>
   </p>
-  <hr>
 </template>
 
 <script setup>
 defineProps({
-  startingDate: {
-    type: String,
-    required: true
-  },
-  endingDate: {
+  date: {
     type: String,
     required: true
   },
