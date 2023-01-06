@@ -1,8 +1,8 @@
 <template>
-  <button :class="{outlined: outlined}" class="btn btn-primary">
+  <a :class="{outlined: outlined}" class="btn btn-primary" download="LEMPEREUR-CORENTIN-CV" href="/files/CV.pdf">
     <FontAwesomeIcon v-if="icon" :icon="icon"/>
     {{ title }}
-  </button>
+  </a>
 </template>
 
 
