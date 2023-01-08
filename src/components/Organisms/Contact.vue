@@ -15,20 +15,25 @@
               <CardTitle>Contact</CardTitle>
             </div>
             <div class="card-body">
-              <form>
+              <form @submit.prevent="sendMail">
                 <div class="mb-3">
-                  <input class="form-control" placeholder="Nom *" type="text">
+                  <input v-model="contact_name" class="form-control" placeholder="Nom *" type="text">
                 </div>
                 <div class="mb-3">
-                  <input class="form-control" placeholder="Email *" type="email">
+                  <input v-model="contact_email" class="form-control" placeholder="Email *" type="email">
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control" rows="5" type="text"></textarea>
+                  <textarea v-model="contact_message" class="form-control" rows="5" type="text"></textarea>
                 </div>
                 <div class="mb-3">
                   <button class="btn btn-primary rounded-1 w-100">Envoyer</button>
                 </div>
               </form>
+              <div v-if="loading" class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,12 +80,37 @@
   </section>
 </template>
 <script>
-import {defineComponent} from "vue";
-import CardTitle from "../Atoms/CardTitle.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import SocialButtonBar from "../Molecules/SocialButtonBar.vue";
+import CardTitle from "@/components/Atoms/CardTitle.vue";
+import SocialButtonBar from "@/components/Molecules/SocialButtonBar.vue";
+import {send} from "@emailjs/browser";
 
-export default defineComponent({
-  components: {SocialButtonBar, FontAwesomeIcon, CardTitle}
-})
+export default {
+  components: {SocialButtonBar, FontAwesomeIcon, CardTitle},
+  data() {
+    return {
+      contact_name: "",
+      contact_email: "",
+      contact_message: "",
+      loading: false
+    }
+  },
+  methods: {
+    async sendMail() {
+      this.loading = true
+
+      await send('service_9yvzhl2', "template_xbjbrs8", {
+        from_name: this.contact_name,
+        from_email: this.contact_email,
+        message: this.contact_message
+      }, 'UypyoFdCVhjwEqXhg')
+
+      this.contact_name = ""
+      this.contact_email = ""
+      this.contact_message = ""
+
+      this.loading = false
+    }
+  }
+}
 </script>
