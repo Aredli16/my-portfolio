@@ -28,6 +28,10 @@
                 <div class="mb-3">
                   <textarea v-model="contact_message" class="form-control" rows="5" type="text"></textarea>
                 </div>
+                <div class="d-flex justify-content-center mb-3">
+                  <vue-recaptcha ref="recaptcha" sitekey="6LdsQ98jAAAAAIS3ozZUak12eXwK0Rvv3v0ag2Yi"
+                                 @verify="checkRobot"/>
+                </div>
                 <div class="mb-3">
                   <button class="btn btn-primary rounded-1 w-100">Envoyer</button>
                 </div>
@@ -86,43 +90,74 @@
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import CardTitle from "@/components/Atoms/CardTitle.vue";
 import SocialButtonBar from "@/components/Molecules/SocialButtonBar.vue";
-import {createToaster} from "@meforma/vue-toaster"
+import {VueRecaptcha} from 'vue-recaptcha';
+import {createToaster} from "@meforma/vue-toaster";
 import {send} from "@emailjs/browser";
 
 export default {
-  components: {SocialButtonBar, FontAwesomeIcon, CardTitle},
+  components: {SocialButtonBar, FontAwesomeIcon, CardTitle, VueRecaptcha},
   data() {
     return {
       contact_name: "",
       contact_email: "",
       contact_message: "",
       loading: false,
-      error: ""
+      error: "",
+      recaptcha: ""
     }
   },
   methods: {
-    async sendMail() {
-      if (this.contact_name && this.contact_email && this.contact_message) {
-        this.error = ""
-        this.loading = true
+    checkRobot(response) {
+      this.recaptcha = response
+    },
 
+    async sendMail() {
+      /*
+      FORM VALIDATION
+       */
+      if (!this.contact_name) {
+        this.error = "Veuillez renseigner votre nom"
+        return
+      }
+
+      if (!this.contact_email) {
+        this.error = "Veuillez renseigner votre email"
+        return
+      }
+
+      if (!this.contact_message) {
+        this.error = "Veuillez renseigner un message"
+        return
+      }
+
+      if (!this.recaptcha) {
+        this.error = "Veuillez compléter le recaptcha"
+        return
+      }
+      this.error = ""
+
+      this.loading = true
+      try {
         await send('service_9yvzhl2', "template_xbjbrs8", {
           from_name: this.contact_name,
           from_email: this.contact_email,
-          message: this.contact_message
+          message: this.contact_message,
+          'g-recaptcha-response': this.recaptcha
         }, 'UypyoFdCVhjwEqXhg')
+      } catch (e) {
+        this.error = e.text
+      }
 
+      if (!this.error) {
         const successToast = createToaster({type: 'success', position: 'top-right'})
         successToast.show("L'email a bien était envoyé")
 
         this.contact_name = ""
         this.contact_email = ""
         this.contact_message = ""
-
-        this.loading = false
-      } else {
-        this.error = "Merci de remplir tous le formulaire"
       }
+
+      this.loading = false
     }
   }
 }
