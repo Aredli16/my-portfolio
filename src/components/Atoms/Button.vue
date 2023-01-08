@@ -1,5 +1,5 @@
 <template>
-  <a :class="{outlined: outlined}" class="btn btn-primary" download="LEMPEREUR-CORENTIN-CV" href="/files/CV.pdf">
+  <a :class="{outlined: outlined}" :href="CV" class="btn btn-primary" download="LEMPEREUR-CORENTIN-CV">
     <FontAwesomeIcon v-if="icon" :icon="icon"/>
     {{ title }}
   </a>
@@ -8,6 +8,7 @@
 
 <script setup>
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import CV from '../../../public/files/CV.pdf'
 
 defineProps({
   title: {
