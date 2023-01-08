@@ -17,8 +17,8 @@
           <hr>
           <ExperienceCard date="2017" experience="Stage dans un service informatique"
                           location="Lyreco">
-            Sate de découverte en classe de 3ème. Ce stage m'a permis de découvrir le monde de l'entreprise ainsi que
-            différent type de métier dans l'informatique: administrateur système, réseau et développeur
+            Stage de découverte en classe de 3ème. Ce stage m'a permis de découvrir le monde de l'entreprise ainsi que
+            différents types de métier dans l'informatique: administrateur système, réseau et développeur
           </ExperienceCard>
         </InformationCard>
       </div>
@@ -31,11 +31,11 @@
           <ExperienceCard date="2020" experience="Baccalauréat"
                           location="Lycée Kastler Denain">
             Baccalauréat scientifique spécialité science de l’ingénieur avec option ISN (Informatique et Sciences du
-            numériques). Obtenu avec mention Bien
+            numérique). Obtenu avec mention Bien
           </ExperienceCard>
           <hr>
-          <ExperienceCard date="2017" experience="Brevet des colleges"
-                          location="College Jean Moulin Wallers">
+          <ExperienceCard date="2017" experience="Brevet des collèges"
+                          location="Collège Jean Moulin Wallers">
             Obtenu avec mention Bien
           </ExperienceCard>
         </InformationCard>

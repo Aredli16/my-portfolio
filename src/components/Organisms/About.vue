@@ -7,7 +7,7 @@
           <p class="text-muted mb-5">Depuis le lycée, l'âge où j'ai découvert le monde de l'informatique, je n'ai cessé
             d'apprendre l'informatique par curiosité et par passion. Cette passion m'a mené à découvrir le développement
             informatique. Depuis ce jour, j'ai compris que c'était cette branche de l'informatique qui me plaisait le
-            plus. Pouvoir créer et utiliser l'ordinateur pour répondre à un besoin quelconque, c'est ce qui me plait le
+            plus. Pouvoir créer et utiliser l'ordinateur pour répondre à un besoin quelconque, c'est ce qui me plaît le
             plus. </p>
           <Button :outlined="true" icon="fa-solid fa-print" title="Imprimer mon CV"/>
         </InformationCard>
@@ -27,7 +27,7 @@
       <div class="col-lg-4 border-start">
         <InformationCard class="border-0" title="Mon expertise">
           <ExpertiseCard
-              description="En passant par le HTML & CSS, Javascript puis du rendu côté serveur avec PHP et Javascript, j'ai acquis de solide connaissance en Web"
+              description="En passant par le HTML & CSS, Javascript puis du rendu côté serveur avec PHP et Javascript, j'ai acquis de solides connaissances en Web"
               icon="fa-solid fa-globe"
               name="Développement Web"/>
           <ExpertiseCard
@@ -35,7 +35,7 @@
               icon="fa-solid fa-mobile"
               name="Développement Mobile"/>
           <ExpertiseCard
-              description="Le premier domaine dans le quelle je me suis lancé. Je suis aujourd'hui capable de produire un logiciel mais aussi j'ai aussi des connaissance en programmation système"
+              description="Le premier domaine dans lequel je me suis lancé. Je suis aujourd'hui capable de produire un logiciel, mais j'ai aussi des connaissances en programmation système"
               icon="fa-solid fa-computer"
               name="Développement logiciel"/>
         </InformationCard>
