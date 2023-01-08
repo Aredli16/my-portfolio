@@ -155,6 +155,7 @@ export default {
         this.contact_name = ""
         this.contact_email = ""
         this.contact_message = ""
+        this.$refs.recaptcha.reset()
       }
 
       this.loading = false
