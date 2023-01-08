@@ -15,6 +15,9 @@
               <CardTitle>Contact</CardTitle>
             </div>
             <div class="card-body">
+              <div v-if="error" class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
               <form @submit.prevent="sendMail">
                 <div class="mb-3">
                   <input v-model="contact_name" class="form-control" placeholder="Nom *" type="text">
@@ -83,6 +86,7 @@
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import CardTitle from "@/components/Atoms/CardTitle.vue";
 import SocialButtonBar from "@/components/Molecules/SocialButtonBar.vue";
+import {createToaster} from "@meforma/vue-toaster"
 import {send} from "@emailjs/browser";
 
 export default {
@@ -92,24 +96,33 @@ export default {
       contact_name: "",
       contact_email: "",
       contact_message: "",
-      loading: false
+      loading: false,
+      error: ""
     }
   },
   methods: {
     async sendMail() {
-      this.loading = true
+      if (this.contact_name && this.contact_email && this.contact_message) {
+        this.error = ""
+        this.loading = true
 
-      await send('service_9yvzhl2', "template_xbjbrs8", {
-        from_name: this.contact_name,
-        from_email: this.contact_email,
-        message: this.contact_message
-      }, 'UypyoFdCVhjwEqXhg')
+        await send('service_9yvzhl2', "template_xbjbrs8", {
+          from_name: this.contact_name,
+          from_email: this.contact_email,
+          message: this.contact_message
+        }, 'UypyoFdCVhjwEqXhg')
 
-      this.contact_name = ""
-      this.contact_email = ""
-      this.contact_message = ""
+        const successToast = createToaster({type: 'success', position: 'top-right'})
+        successToast.show("L'email a bien était envoyé")
 
-      this.loading = false
+        this.contact_name = ""
+        this.contact_email = ""
+        this.contact_message = ""
+
+        this.loading = false
+      } else {
+        this.error = "Merci de remplir tous le formulaire"
+      }
     }
   }
 }
