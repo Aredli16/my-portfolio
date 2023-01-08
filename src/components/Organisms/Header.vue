@@ -12,15 +12,19 @@
               data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="navbarSupportedContent" class="collapse navbar-collapse py-2">
+      <div id="navbarSupportedContent" class="collapse navbar-collapse py-2 text-center">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">A propos</a></li>
           <li class="nav-item"><a class="nav-link" href="#resume">CV</a></li>
         </ul>
-        <ul class="navbar-nav mx-auto brand">
-          <img alt="avatar" class="brand-img position-absolute top-50 start-50 translate-middle"
+        <ul class="d-none d-lg-block navbar-nav mx-auto">
+          <img id="brand-img" alt="avatar" class="position-absolute start-50 translate-middle"
                src="../../assets/img/avatar.jpg">
+          <li id="brand-text" class="position-absolute start-50 translate-middle text-center">
+            <h5>Lempereur Corentin</h5>
+            <p class="mb-1 text-muted">Développeur informatique</p>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
@@ -40,7 +44,24 @@ header {
 </style>
 <script setup>
 import SocialButtonBar from "../Molecules/SocialButtonBar.vue";
-import HeaderContent from "../Molecules/HeaderContent.vue";</script>
+import HeaderContent from "../Molecules/HeaderContent.vue";
+
+window.addEventListener("scroll", () => {
+  if (document.getElementById("navbar").offsetTop > window.scrollY) {
+    document.getElementById('brand-img').style.opacity = '1'
+    document.getElementById('brand-img').style.top = '50%'
+    document.getElementById('brand-text').style.opacity = '0'
+    document.getElementById('brand-text').style.top = '100%'
+
+  } else {
+    document.getElementById('brand-img').style.opacity = '0'
+    document.getElementById('brand-img').style.top = '-5%'
+    document.getElementById('brand-text').style.opacity = '1'
+    document.getElementById('brand-text').style.top = '50%'
+
+  }
+})
+</script>
 
 <style scoped>
 .navbar {
@@ -59,12 +80,21 @@ import HeaderContent from "../Molecules/HeaderContent.vue";</script>
   padding-left: 1.5rem !important;
 }
 
-.brand-img {
+#brand-text {
+  top: 50%;
+  opacity: 0;
+  transition: 500ms ease;
+}
+
+#brand-img {
+  top: 50%;
   width: 180px;
   height: 180px;
   object-fit: cover;
   border: 10px solid white;
   box-shadow: 0 5px 1px rgb(128 128 128 / 13%);
   border-radius: 100%;
+  opacity: 1;
+  transition: 500ms ease;
 }
 </style>
