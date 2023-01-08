@@ -9,8 +9,9 @@
       <Resume id="resume"/>
       <Portfolio id="portfolio"/>
     </main>
+    <span id="contact"></span>
     <footer>
-      <Contact id="contact"/>
+      <Contact/>
     </footer>
   </div>
 </template>
