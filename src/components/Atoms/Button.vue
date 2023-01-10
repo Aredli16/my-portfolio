@@ -8,7 +8,7 @@
 
 <script setup>
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import CV from '../../../public/files/CV.pdf'
+import CV from '../../files/CV.pdf'
 
 defineProps({
   title: {
