@@ -4,6 +4,14 @@
     <div class="row justify-content-evenly">
       <div class="col-lg-4">
         <InformationCard class="p-4" title="Expériences">
+          <ExperienceCard date="Avril 2023 - Aout 2023" experience="Trading développeur"
+                          location="Equens Worldline">
+            Mener un projet de développement de bout en bout impactant des webs d'administration, de monitoring et
+            d'analyse de données. Etre à l'écoute d'interlocuteurs projets et d'experts. Gérer les différentes phases
+            d'un projet autour d'un
+            sujet complexe et dans un contexte multiclient et international
+          </ExperienceCard>
+          <hr>
           <ExperienceCard date="2021 - Aujourd'hui" experience="Préparateur et Livreur Drive" location="Auchan Retail">
             Préparation des commandes puis livraison finale jusqu’aux clients dans le respect de la charte de l’enseigne
           </ExperienceCard>
@@ -43,11 +51,11 @@
       <div class="col-lg-4">
         <InformationCard class="p-4" title="Compétences">
           <SkillBar :percentage="95" skill="PHP"/>
+          <SkillBar :percentage="95" skill="Java"/>
           <SkillBar :percentage="92" skill="Javascript"/>
           <SkillBar :percentage="90" skill="Dart"/>
           <SkillBar :percentage="90" skill="SQL"/>
           <SkillBar :percentage="85" skill="HTML & CSS"/>
-          <SkillBar :percentage="85" skill="Java"/>
           <SkillBar :percentage="60" skill="C & C++"/>
         </InformationCard>
         <InformationCard class="p-4 mt-3" title="Langues">
