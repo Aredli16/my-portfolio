@@ -4,11 +4,13 @@
       <div class="col-lg-4 border-end">
         <InformationCard class="border-0" title="Qui suis-je ?">
           <h5>Un jeune développeur passionné depuis son plus jeune âge</h5>
-          <p class="text-muted mb-5">Depuis le lycée, l'âge où j'ai découvert le monde de l'informatique, je n'ai cessé
-            d'apprendre l'informatique par curiosité et par passion. Cette passion m'a mené à découvrir le développement
-            informatique. Depuis ce jour, j'ai compris que c'était cette branche de l'informatique qui me plaisait le
-            plus. Pouvoir créer et utiliser l'ordinateur pour répondre à un besoin quelconque, c'est ce qui me plaît le
-            plus. </p>
+          <p class="text-muted mb-5">
+            L'informatique a toujours été présent dans mon quotidien. J'ai toujours été quelqu'un de curieux et j'ai
+            alors commencé à apprendre ce vaste monde en autodidacte dès le début du lycée. Mon parcours m'a ainsi
+            permis de développer une certaine expertise et des compétences techniques. Aujourd'hui, j'effectue
+            actuellement mon Master en alternance à l'Université Catholique de Lille dans l'entreprise Worldline pour
+            parfaire mes compétences puis décrocher le diplôme qui me permettra ainsi d'exercer le métier de mes rêves.
+          </p>
           <Button :outlined="true" icon="fa-solid fa-print" title="Imprimer mon CV"/>
         </InformationCard>
       </div>
@@ -18,7 +20,7 @@
             <li><span class="fw-600">Date de naissance: </span><span class="text-muted">16/03/2002</span></li>
             <li><span class="fw-600">Email: </span><span class="text-muted">corentin.lempereur16@gmail.com</span></li>
             <li><span class="fw-600">Téléphone: </span><span class="text-muted">06 08 61 88 46</span></li>
-            <li><span class="fw-600">Adresse Postale: </span><span class="text-muted">69 bis Rue Louis Pasteur 59135 Wallers</span>
+            <li><span class="fw-600">Adresse Postale: </span><span class="text-muted">108 Boulevard Montebello 59000 Lille</span>
             </li>
           </ul>
           <SocialButtonBar/>
@@ -27,17 +29,17 @@
       <div class="col-lg-4 border-start">
         <InformationCard class="border-0" title="Mon expertise">
           <ExpertiseCard
-              description="En passant par le HTML & CSS, Javascript puis du rendu côté serveur avec PHP et Javascript, j'ai acquis de solides connaissances en Web"
-              icon="fa-solid fa-globe"
-              name="Développement Web"/>
+              description="Mes différents projets personnels et professionnels m'ont permis d'acquérir des compétences dans les choix d'une architecture logicielle"
+              icon="fa-solid fa-industry"
+              name="Conception logicielle"/>
           <ExpertiseCard
-              description="Ayant appris différentes technos, j'ai pu réaliser mes premiers projets concrets en développement mobile"
-              icon="fa-solid fa-mobile"
-              name="Développement Mobile"/>
+              description="Le développement backend a était une révélation dans mon apprentissage du développement. C'est le domaine dans lequel je pense avoir le plus de compétence et qui me plaît le plus"
+              icon="fa-solid fa-terminal"
+              name="Développement back"/>
           <ExpertiseCard
-              description="Le premier domaine dans lequel je me suis lancé. Je suis aujourd'hui capable de produire un logiciel, mais j'ai aussi des connaissances en programmation système"
-              icon="fa-solid fa-computer"
-              name="Développement logiciel"/>
+              description="Durant l'élaboration de mes différents projets, j'ai pu parfaire mes compétences front et cela me permet aujourd'hui de créer des interfaces innovantes et ergonomiques"
+              icon="fa-solid fa-window-maximize"
+              name="Développement Front"/>
         </InformationCard>
       </div>
     </div>

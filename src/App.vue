@@ -11,7 +11,7 @@
     </main>
     <span id="contact"></span>
     <footer>
-      <Contact/>
+      <Contact class="d-none d-xl-block"/>
     </footer>
   </div>
 </template>
